@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "TBBaseViewController+Model.h"
+#import "TBBaseViewController+View.h"
+
+#import "TDEngineLog.h"
+
 @interface TBBaseViewController : UIViewController
 
 @end

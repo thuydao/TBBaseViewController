@@ -8,6 +8,54 @@
 
 #import "TBBaseViewController.h"
 
+#import "TBBaseViewController+Model.h"
+#import "TBBaseViewController+View.h"
+
+@interface TBBaseViewController()
+{
+    
+}
+
+@end
+
 @implementation TBBaseViewController
+
+#pragma mark -
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+- (void)dealloc
+{
+    TDLOG(@"%@ dealloc", NSStringFromClass([self class]));
+}
 
 @end
