@@ -10,6 +10,19 @@
 
 #import "TDEngineLog.h"
 
+//#import "TBBaseViewController+Model.h"
+//#import "TBBaseViewController+View.m"
+
 @interface TBBaseViewController : UIViewController
+
+#pragma mark - Appear More
+- (void)firstWillAppear;
+- (void)firstDidAppear;
+- (void)firstWillDisappear;
+- (void)firstDidDisappear;
+
+#pragma mark - Orientation
+- (void)layoutForPortrait;
+- (void)layoutForLandscape;
 
 @end
