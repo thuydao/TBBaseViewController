@@ -8,9 +8,6 @@
 
 #import "TBBaseViewController.h"
 
-#import "TBBaseViewController+Model.h"
-#import "TBBaseViewController+View.h"
-
 @interface TBBaseViewController()
 {
     

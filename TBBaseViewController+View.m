@@ -10,25 +10,25 @@
 
 @implementation TBBaseViewController (View)
 
-#pragma mark - Push
-- (void)pushViewControllerWithClass:(Class)aClass
+#pragma mark - Push Notification
+- (void)tb_pushViewControllerWithClass:(Class )aClass
 {
-    [self pushViewControllerWithClass:aClass withAnimation:YES];
+    [self tb_pushViewControllerWithClass:aClass withAnimation:YES];
 }
 
-- (void)pushViewControllerWithClass:(Class )aClass withAnimation:(BOOL )isAnimation
+- (void)tb_pushViewControllerWithClass:(Class )aClass withAnimation:(BOOL )isAnimation
 {
     UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
     
-    [self pushViewControllerWithObject:vc withAnimation:isAnimation];
+    [self tb_pushViewControllerWithObject:vc withAnimation:isAnimation];
 }
 
-- (void)pushViewControllerWithObject:(id )aObject
+- (void)tb_pushViewControllerWithObject:(id )aObject
 {
     [self.navigationController pushViewController:aObject animated:YES];
 }
 
-- (void)pushViewControllerWithObject:(id )aObject withAnimation:(BOOL )isAnimation
+- (void)tb_pushViewControllerWithObject:(id )aObject withAnimation:(BOOL )isAnimation
 {
     [self.navigationController pushViewController:aObject animated:isAnimation];
 }
