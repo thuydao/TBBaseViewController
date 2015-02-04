@@ -62,7 +62,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    
+
     if ( isFirstWillDisappear )
     {
         isFirstWillDisappear = NO;
@@ -95,21 +95,33 @@
 }
 
 #pragma mark - Appear More
+/**
+ *  firstWillAppear
+ */
 - (void)firstWillAppear
 {
     TDLOG(@"");
 }
 
+/**
+ *  firstDidAppear
+ */
 - (void)firstDidAppear
 {
     TDLOG(@"");
 }
 
+/**
+ *  firstWillDisappear
+ */
 - (void)firstWillDisappear
 {
     TDLOG(@"");
 }
 
+/**
+ *  firstDidDisappear
+ */
 - (void)firstDidDisappear
 {
     TDLOG(@"");
@@ -128,11 +140,17 @@
     }
 }
 
+/**
+ *  layoutForPortrait
+ */
 - (void)layoutForPortrait
 {
     // Begin code here
 }
 
+/**
+ *  layoutForLandscape
+ */
 - (void)layoutForLandscape
 {
     // Begin code here
