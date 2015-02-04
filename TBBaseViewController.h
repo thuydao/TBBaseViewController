@@ -12,4 +12,38 @@
 
 @interface TBBaseViewController : UIViewController
 
+#pragma mark - Appear More
+/**
+ *  firstWillAppear
+ */
+- (void)firstWillAppear;
+
+/**
+ *  firstDidAppear
+ */
+- (void)firstDidAppear;
+
+/**
+ *  firstWillDisappear
+ */
+- (void)firstWillDisappear;
+
+/**
+ *  firstDidDisappear
+ */
+- (void)firstDidDisappear;
+
+
+#pragma mark - Orientation
+
+/**
+ *  layoutForPortrait
+ */
+- (void)layoutForPortrait;
+
+/**
+ *  layoutForLandscape
+ */
+- (void)layoutForLandscape;
+
 @end
