@@ -15,6 +15,13 @@
 
 @interface TBBaseViewController : UIViewController
 
+#pragma mark - initView
+
+/**
+ *  initView
+ */
+- (void)initView;
+
 #pragma mark - Appear More
 /**
  *  firstWillAppear
@@ -55,6 +62,15 @@
 
 #pragma mark - Category NavigationController
 @interface TBBaseViewController (NavigationController)
+
+/**
+ *  tb_getViewControllerWithClass
+ *
+ *  @param aClass Class
+ *
+ *  @return UIViewController
+ */
+- (id)tb_getViewControllerWithClass:(Class)aClass;
 
 /**
  *  tb_pushViewControllerWithClass

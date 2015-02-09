@@ -22,6 +22,15 @@
 @implementation TBBaseViewController
 
 #pragma mark - View lifecyl
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        [self initView];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -94,6 +103,16 @@
     TDLOG(@"%@ dealloc", NSStringFromClass([self class]));
 }
 
+#pragma mark - initView
+
+/**
+ *  initView
+ */
+- (void)initView
+{
+    
+}
+
 #pragma mark - Appear More
 /**
  *  firstWillAppear
@@ -163,6 +182,26 @@
 #pragma mark - Category NavigationController
 @implementation TBBaseViewController (NavigationController)
 
+/**
+ *  tb_getViewControllerWithClass
+ *
+ *  @param aClass Class
+ *
+ *  @return UIViewController
+ */
+- (id)tb_getViewControllerWithClass:(Class)aClass
+{
+    @try
+    {
+        UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
+        return vc;
+    }
+    @catch (NSException *exception)
+    {
+        return [[UIViewController alloc] init];
+        TDLOG(@"cant found viewcontroller from storyboard file")
+    }
+}
 
 /**
  *  tb_pushViewControllerWithClass
