@@ -157,3 +157,80 @@
 }
 
 @end
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - Category NavigationController
+@implementation TBBaseViewController (NavigationController)
+
+
+/**
+ *  tb_pushViewControllerWithClass
+ *
+ *  Default animation = yes
+ *  @param aClass Class
+ */
+- (void)tb_pushViewControllerWithClass:(Class )aClass
+{
+    [self tb_pushViewControllerWithClass:aClass animated:YES];
+}
+
+/**
+ *  tb_pushViewControllerWithClass
+ *
+ *  @param aClass      Class
+ *  @param isAnimation BOOL
+ */
+- (void)tb_pushViewControllerWithClass:(Class )aClass animated:(BOOL )animated
+{
+    @try
+    {
+        UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
+        
+        [self tb_pushViewControllerWithObject:vc animated:animated];
+    }
+    @catch (NSException *exception)
+    {
+        TDLOG(@"cant found viewcontroller from storyboard file")
+    }
+}
+
+
+/**
+ *  tb_pushViewControllerWithObject
+ *
+ *  default animated = yes;
+ *  @param aObject id
+ */
+- (void)tb_pushViewControllerWithObject:(id )aObject
+{
+    @try
+    {
+        [self.navigationController pushViewController:aObject animated:YES];
+    }
+    @catch (NSException *exception)
+    {
+        TDLOG(@"cant found viewcontroller from storyboard file")
+    }
+}
+
+/**
+ *  tb_pushViewControllerWithObject
+ *
+ *  @param aObject     id
+ *  @param isAnimation BOOL
+ */
+- (void)tb_pushViewControllerWithObject:(id )aObject animated:(BOOL )animated
+{
+    @try
+    {
+        [self.navigationController pushViewController:aObject animated:animated];
+    }
+    @catch (NSException *exception)
+    {
+        TDLOG(@"cant found viewcontroller from storyboard file")
+    }
+}
+
+
+@end
