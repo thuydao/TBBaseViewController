@@ -104,4 +104,11 @@
  */
 - (void)tb_pushViewControllerWithObject:(id )aObject animated:(BOOL )animated;
 
+/**
+ *  tb_popViewControllerWithObject
+ *
+ *  @param aObject id
+ */
+- (void)tb_popViewControllerWithObject:(id)aObject;
+
 @end

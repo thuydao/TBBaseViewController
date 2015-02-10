@@ -249,7 +249,7 @@
     }
     @catch (NSException *exception)
     {
-        TDLOG(@"cant found viewcontroller from storyboard file")
+        TDLOG(@"object = nil")
     }
 }
 
@@ -267,7 +267,24 @@
     }
     @catch (NSException *exception)
     {
-        TDLOG(@"cant found viewcontroller from storyboard file")
+        TDLOG(@"object = nil")
+    }
+}
+
+/**
+ *  tb_popViewControllerWithObject
+ *
+ *  @param aObject id
+ */
+- (void)tb_popViewControllerWithObject:(id)aObject
+{
+    @try
+    {
+        [self.navigationController popToViewController:aObject animated:YES];
+    }
+    @catch (NSException *exception)
+    {
+        TDLOG(@"object = nil")
     }
 }
 
