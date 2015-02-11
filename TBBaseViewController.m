@@ -26,7 +26,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        [self initView];
+        [self performSelector:@selector(initView)];
     }
     return self;
 }
