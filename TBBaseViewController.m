@@ -26,7 +26,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        [self performSelector:@selector(initView)];
+        // [self performSelector:@selector(initView)];
     }
     return self;
 }
@@ -34,6 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self performSelector:@selector(initView)];
     
     isFirstWillAppear = YES;
     isFirstDidAppear = YES;
@@ -104,11 +106,19 @@
 }
 
 #pragma mark - initView
-
 /**
  *  initView
  */
 - (void)initView
+{
+    
+}
+
+#pragma mark - Focus Field
+/**
+ *  focusField
+ */
+- (void)focusField
 {
     
 }
@@ -128,6 +138,8 @@
 - (void)firstDidAppear
 {
     TDLOG(@"");
+    
+    [self focusField];
 }
 
 /**

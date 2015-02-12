@@ -16,11 +16,16 @@
 @interface TBBaseViewController : UIViewController
 
 #pragma mark - initView
-
 /**
  *  initView
  */
 - (void)initView;
+
+#pragma mark - Focus Field
+/**
+ *  focusField
+ */
+- (void)focusField;
 
 #pragma mark - Appear More
 /**
