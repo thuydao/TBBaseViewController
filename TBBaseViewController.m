@@ -300,5 +300,40 @@
     }
 }
 
+/**
+ *  tb_popViewController
+ */
+- (void)tb_popViewController
+{
+    [self tb_popViewControllerWithAnimation:YES];
+}
+
+/**
+ *  tb_popViewControllerWithAnimation
+ *
+ *  @param animated BOOL
+ */
+- (void)tb_popViewControllerWithAnimation:(BOOL )animated
+{
+    [self.navigationController popViewControllerAnimated:animated];
+}
+
+/**
+ *  tb_popToRootViewControllerWithAnimation
+ */
+- (void)tb_popToRootViewController
+{
+    [self tb_popToRootViewControllerWithAnimation:YES];
+}
+
+/**
+ *  tb_popToRootViewControllerWithAnimation
+ *
+ *  @param animated BOOL
+ */
+- (void)tb_popToRootViewControllerWithAnimation:(BOOL )animated
+{
+    [self.navigationController popToRootViewControllerAnimated:animated];
+}
 
 @end

@@ -116,4 +116,28 @@
  */
 - (void)tb_popViewControllerWithObject:(id)aObject;
 
+/**
+ *  tb_popViewController
+ */
+- (void)tb_popViewController;
+
+/**
+ *  tb_popViewControllerWithAnimation
+ *
+ *  @param animated BOOL
+ */
+- (void)tb_popViewControllerWithAnimation:(BOOL )animated;
+
+/**
+ *  tb_popToRootViewControllerWithAnimation
+ */
+- (void)tb_popToRootViewController;
+
+/**
+ *  tb_popToRootViewControllerWithAnimation
+ *
+ *  @param animated BOOL
+ */
+- (void)tb_popToRootViewControllerWithAnimation:(BOOL )animated;
+
 @end
