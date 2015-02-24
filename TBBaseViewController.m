@@ -336,4 +336,13 @@
     [self.navigationController popToRootViewControllerAnimated:animated];
 }
 
+/**
+ *  tb_hideBackbutton
+ */
+- (void)tb_hideBackbutton
+{
+    self.navigationItem.leftBarButtonItem=nil;
+    self.navigationItem.hidesBackButton=YES;
+}
+
 @end

@@ -140,4 +140,10 @@
  */
 - (void)tb_popToRootViewControllerWithAnimation:(BOOL )animated;
 
+
+/**
+ *  tb_hideBackbutton
+ */
+- (void)tb_hideBackbutton;
+
 @end
